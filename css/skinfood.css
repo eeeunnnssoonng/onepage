@@ -1,11 +1,15 @@
 @import url(common.css);
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @font-face {
   font-family: 'GangwonEdu_OTFBoldA';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff')
-}
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-/* font-family: 'Nanum Gothic', sans-serif; */
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff')}
+
+
 
 body{
   font-family: 'GangwonEdu_OTFBoldA';
@@ -58,7 +62,7 @@ header{
   color: #fff;
 }
 
-.utillMenu a:hover{color: #efede0;}
+.utillMenu a:hover{color: orange;}
 
 .logo img{
   margin-top: 10px;
@@ -435,7 +439,7 @@ button {
   border: 2px solid #334431;
   border-radius: 30px;
   padding: 8px 15px;
-  margin: 0 0 90px 580px;
+  margin: 0 0 90px 560px;
   cursor: pointer;
   font-family: 'GangwonEdu_OTFBoldA';
   height:32px;
@@ -465,7 +469,7 @@ button {
   padding: 30px 0;
 }
 
-#for_you p{
+#for_you h4{
   text-align: center;
   width: 100%;
   line-height: 30px;
@@ -473,14 +477,277 @@ button {
   margin-top: 25px;  
 }
 
-
-
-
 #for_you .type_box{
   text-align: center;
   width: 100%;
   line-height: 30px;
   font-size: 30px;
-  line-height: 30px;
   margin-top: 25px;
 }
+
+select {
+  width: 200px;
+  padding: 15px 0;
+  font-size: 20px;
+  font-family: 'GangwonEdu_OTFBoldA';
+  text-align: center;
+}
+
+.skintype_img_box{
+  margin-top: 100px;
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.skintype_img{
+  position: relative;
+  width:300px;
+  height: 400px;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.skintype_img img{
+  width:300px;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.skintype_img:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skintype_caption{
+  position: absolute;
+  top:100%;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  width:inherit;
+  height:inherit;
+  padding-top: 170px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.skintype_img:hover .skintype_caption{
+  top:0;
+background:linear-gradient(to top,#334431, transparent);}
+
+.skintype_caption h3{
+  font-size: 25px;
+}
+
+.skintype_caption p{
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.skintype_caption a{
+  display: inline-block;
+  color: #fff;
+  margin-top: 50px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width:80px;
+  height: 30px;
+  padding-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.skintype_caption a:hover{
+  background-color: orange;
+}
+
+#event{
+  width: 1200px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#event h2{
+  font-family: 'Nanum Gothic', sans-serif;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 60px;
+  padding: 30px 0;
+}
+
+.tab-inner{
+  width: 1200px;
+  height: 700px;
+}
+
+input[name=tabmenu]{display: none;}
+
+.slide{
+  position: relative;
+  margin-top: 50px;
+  width: 1200px;
+  height: 524px;
+  overflow: hidden;
+}
+
+.slide-inner{
+  width: 3600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  transition: 0.5s;
+}
+
+.btn{
+  text-align: center;
+}
+
+.btn label{
+  background-color: lightgray;
+  margin-top: 50px;
+  width: 50px;
+  height: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[id=tab1]:checked ~.slide1,
+input[id=tab2]:checked ~.slide2,
+input[id=tab3]:checked ~.slide3{
+  opacity: 1;
+  left: 0;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+  background-color: #334431;
+}
+
+input[id=tab1]:checked ~.slide .slide-inner{left: 0;}
+input[id=tab2]:checked ~.slide .slide-inner{left: -1200px;}
+input[id=tab3]:checked ~.slide .slide-inner{left: -2400px;}
+
+#review{
+  width: 1200px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#review h2{
+  font-family: 'Nanum Gothic', sans-serif;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 60px;
+  padding: 30px 0;
+}
+
+#review_1 a{
+  font-size: 30px;
+  display: block;
+  margin: 50px 0 20px 0;
+}
+#review img{
+  margin-top: 50px;
+  border-radius:53% 47% 63% 37% / 41% 35% 65% 59% ;
+}
+
+.review1, .review2, .review3{
+  display: flex;
+  position: relative;
+}
+
+.review1 h3, .review2 h3, .review3 h3{
+  font-size: 25px;
+  top: 100px;
+  left: 700px;
+  width: 500px;
+  height: 100px;
+  position: absolute;
+}
+
+.review1 span, .review2 span, .review3 span{
+  display: block;
+  position: absolute;
+  left: 700px;
+  top: 140px;
+  width: 500px;
+  height: 100px;
+}
+
+.fa-solid{
+  position: relative;
+  top: 210px;
+  left: 155px;
+  color: gold;
+}
+
+.review1 a, .review2 a, .review3 a{
+  position: relative;
+  top: 300px;
+  left: 70px;
+}
+
+.review1 a:hover{color: orange;}
+.review2 a:hover{color: orange;}
+.review3 a:hover{color: orange;}
+
+
+/* footer */
+
+footer{
+  width: 100%;
+  height: 500px;
+  background:url(../image/ffter.png) no-repeat center bottom;
+}
+
+.f_menu{
+  padding: 40px 0;
+}
+
+.f_menu a{
+  padding-right: 30px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.f_menu a:hover{color:orange;}
+
+.ff_ter{
+  width: 1200px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 270px;
+  color: #b8b8b8;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footerMenu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.fa{
+  margin:  0 10px;
+}
+
+.fa:hover{color: orange;}
